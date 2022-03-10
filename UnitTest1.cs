@@ -6,6 +6,7 @@ namespace AnalyseMoodTesting
     [TestClass]
     public class MoodTesting
     {
+        //TC-1.1
         [TestMethod]
         public void AnalyseMoodTest1()
         {
@@ -14,8 +15,8 @@ namespace AnalyseMoodTesting
             string expected = "Sad";
             //Act 
 
-            AnalyseMood analyseMood = new AnalyseMood();
-            string actual = analyseMood.AnalysingMood("I am in Sad Mood");
+            AnalyseMood analyseMood = new AnalyseMood("I am in Sad Mood");
+            string actual = analyseMood.AnalysingMood();
 
 
             //Assert
@@ -23,16 +24,17 @@ namespace AnalyseMoodTesting
 
         }
 
+        //TC-1.2
         [TestMethod]
         public void AnalyseMoodTest2()
         {
             //Arrange
-            string Mood = "I am in Any Mood";
-            string expected = "Happy";
+            string Mood = "I am in Happy Mood";
+            string expected = "Sad";
             //Act 
 
-            AnalyseMood analyseMood = new AnalyseMood();
-            string actual = analyseMood.AnalysingMood("I am in Any Mood");
+            AnalyseMood analyseMood = new AnalyseMood("I am in Happy Mood");
+            string actual = analyseMood.AnalysingMood();
 
 
             //Assert
