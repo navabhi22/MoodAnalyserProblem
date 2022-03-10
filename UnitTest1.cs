@@ -41,5 +41,24 @@ namespace AnalyseMoodTesting
             Assert.AreEqual(actual, expected);
 
         }
+
+        //TC-2.1
+        [TestMethod]
+        public void AnalyseMoodTest3()
+        {
+            //Arrange
+            string Mood = null;
+            string expected = "Happy";
+            //Act 
+
+            AnalyseMood analyseMood = new AnalyseMood(null);
+            string actual = analyseMood.AnalysingMood();
+
+
+            //Assert
+            Assert.AreEqual(actual, expected);
+
+        }
+
     }
 }
