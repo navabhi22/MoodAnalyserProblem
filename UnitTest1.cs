@@ -14,8 +14,8 @@ namespace AnalyseMoodTesting
             string expected = "Sad";
             //Act 
 
-            AnalyseMood analyseMood = new AnalyseMood();
-            string actual = analyseMood.AnalysingMood("I am in Sad Mood");
+            AnalyseMood analyseMood = new AnalyseMood("I am in Sad Mood");
+            string actual = analyseMood.AnalysingMood();
 
 
             //Assert
@@ -31,8 +31,40 @@ namespace AnalyseMoodTesting
             string expected = "Happy";
             //Act 
 
-            AnalyseMood analyseMood = new AnalyseMood();
-            string actual = analyseMood.AnalysingMood("I am in Any Mood");
+            AnalyseMood analyseMood = new AnalyseMood(null);
+            string actual = analyseMood.AnalysingMood();
+
+
+            //Assert
+            Assert.AreEqual(actual, expected);
+
+        }
+        [TestMethod]
+        public void AnalyseMoodTest3()
+        {
+            //Arrange
+            string Mood = null;
+            string expected = "Happy";
+            //Act 
+
+            AnalyseMood analyseMood = new AnalyseMood(null);
+            string actual = analyseMood.AnalysingMood();
+
+
+            //Assert
+            Assert.AreEqual(actual, expected);
+
+        }
+        [TestMethod]
+        public void AnalyseMoodTest4()
+        {
+            //Arrange
+            string Mood = "";
+            string expected = "Happy";
+            //Act 
+
+            AnalyseMood analyseMood = new AnalyseMood("");
+            string actual = analyseMood.AnalysingMood();
 
 
             //Assert
